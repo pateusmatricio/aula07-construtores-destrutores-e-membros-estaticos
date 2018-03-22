@@ -4,7 +4,7 @@ compilador = g++
 
 flags = -Wall -ansi -pedantic -O0 -g -std=c++11
 
-objetos = ./build/main.o ./build/sapo.o
+objetos = ./build/main.o ./build/sapo.o ./build/corrida.o
 
 aula07: $(aula07)
 
@@ -17,6 +17,9 @@ $(aula07): $(objetos)
 	$(compilador) -c $^ $(flags) -o $@
 
 ./build/sapo.o: ./src/sapo.cpp
+	$(compilador) -c $^ $(flags) -o $@
+
+./build/corrida.o: ./src/corrida.cpp
 	$(compilador) -c $^ $(flags) -o $@
 
 dir:

@@ -1,6 +1,7 @@
-//#include "sapo.hpp"
-#include "sapo.h"
+//sapo.cpp
 
+#include "sapo.hpp"
+#include <time.h>
 #include <stdlib.h>
 
 Sapo::Sapo(int i, int d){

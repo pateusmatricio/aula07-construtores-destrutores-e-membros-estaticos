@@ -1,33 +1,16 @@
 #include <iostream>
-
-
-//#include "sapo.hpp"
-#include "sapo.h"
+#include "sapo.hpp"
+#include "corrida.hpp"
 
 int percurso = 25;
 
 int main(){
 
-	Sapo a(1,2);
-	Sapo b(2,3);
+	Sapo a(1,3);
+	Sapo b(2,2);
 	Sapo c(3,4);
 
-	while(a.getDistanciaPercorrida() < percurso && b.getDistanciaPercorrida() < percurso && c.getDistanciaPercorrida() < percurso ){
-		a.pular();
-		b.pular();
-		c.pular();
-	}
+	corrida(a,b,c, percurso);
 
-	if(a.getDistanciaPercorrida() >= percurso){
-		std::cout << "o sapo vencedor é o sapo " << a.getId() << ", com " << a.getQuantidadePulos() << " pulos, totalizando " << a.getDistanciaPercorrida()	<< " unidades de medida " << std::endl; 
-		return 0; 
-	} 
-	if(b.getDistanciaPercorrida() >= percurso){
-		std::cout << "o sapo vencedor é o sapo " << b.getId() << ", com " << b.getQuantidadePulos() << " pulos, totalizando " << b.getDistanciaPercorrida()	<< " unidades de medida " << std::endl; 
-		return 0; 
-	} 
-	if(c.getDistanciaPercorrida() >= percurso){
-		std::cout << "o sapo vencedor é o sapo " << c.getId() << ", com " << c.getQuantidadePulos() << " pulos, totalizando " << c.getDistanciaPercorrida()	<< " unidades de medida " << std::endl;
-		return 0; 	
-	} 	
+	return 0;
 }
