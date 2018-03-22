@@ -1,4 +1,11 @@
-//sapo.cpp
+/*
+* @file 	sapo.cpp
+* @brief	sapos que vão correr nas corridas de sapos
+* @author	Mateus Patricio
+* @since 	17/03/2018
+* @date		22/03/2018
+* @sa 		
+*/
 
 #include "sapo.hpp"
 #include <time.h>
@@ -43,6 +50,7 @@ void Sapo::setQuantidadePulos(int q){
 	quantidadePulos = q;
 }
 
+/* @brief ato ou efeito do sapo */
 void Sapo::pular(){
 	srand(time(NULL));
 
